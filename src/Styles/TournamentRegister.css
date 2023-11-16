@@ -1,0 +1,21 @@
+.touranment-register {}
+
+
+.tournament-register-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    height: calc(100vh - 72px);
+
+    display: flex;
+    justify-content: center;
+    background-color: blanchedalmond;
+
+}
+
+.tournament-register-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

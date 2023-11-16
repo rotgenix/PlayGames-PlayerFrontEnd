@@ -1,0 +1,46 @@
+.register-page {
+    background-color: #14191d;
+    height: calc(100vh - 72px);
+    padding-block: 150px;
+}
+
+.register-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.player,
+.organiser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.player img,
+.organiser img {
+    width: 350px;
+}
+
+.player button,
+.organiser button {
+    width: 350px;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 600;
+
+
+    background-color: rgb(236, 49, 49);
+    border: none;
+    color: white;
+    transition-duration: 0.3s;
+}
+
+.player button:hover,
+.organiser button:hover {
+    cursor: pointer;
+    background-color: rgb(160, 38, 38);
+}

@@ -1,0 +1,153 @@
+.hero-section {
+    position: relative;
+}
+
+.background-image-container {
+    width: 100%;
+    height: calc(100vh - 150px);
+    background-image: url('../assets/BackgroundImage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.background-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(53, 52, 50, 0.815);
+
+}
+
+.background-text-container h1 {
+    font-size: 80px;
+}
+
+
+/* Follow section  */
+
+.follow {
+    background-color: #8a1f13;
+    /* height: 50px; */
+    padding-block: 18px;
+}
+
+.about-paai {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-paai ul {
+    display: flex;
+    /* justify-content: space-between; */
+    list-style: none;
+    gap: 20px;
+}
+
+
+
+
+
+/* Supported Games */
+.supported-games {
+    background-color: #161d22;
+    padding-block: 100px;
+}
+
+.games {
+    margin: 0 auto;
+    max-width: 1200px;
+    /* background-color: antiquewhite; */
+
+}
+
+.games-text {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.games-text h1 {
+    font-size: 42px;
+    text-align: center;
+    /* align-self: center; */
+    color: white;
+    line-height: 49px;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.games p {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    line-height: 36px;
+}
+
+.supported-card-container {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+
+
+
+/* Featured Tournaments */
+.featured-tournaments {
+    background-color: #14191d;
+    padding-block: 100px;
+}
+
+.featured {
+    margin: 0 auto;
+    max-width: 1200px;
+    /* background-color: antiquewhite; */
+
+}
+
+.featured-text {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featured-text h1 {
+    font-size: 42px;
+    text-align: center;
+    /* align-self: center; */
+    color: white;
+    line-height: 49px;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.featured-text p {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    line-height: 36px;
+}
+
+.featured-card-container {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}

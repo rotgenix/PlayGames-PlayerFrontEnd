@@ -1,0 +1,28 @@
+.tournaments-page {
+
+    background-color: #1a2024;
+}
+
+.tournaments-container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 50px;
+}
+
+.tournaments-container-text h3 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.tournaments-container div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
