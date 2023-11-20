@@ -6,7 +6,7 @@ const CheckTeams = () => {
 
     const [tournamentsTeam, setTournamentsTeam] = useState([]);
     const { tournamentID } = useParams();
-    console.log(tournamentID)
+    console.log(tournamentID);
 
     useEffect(() => {
 
@@ -42,7 +42,7 @@ const CheckTeams = () => {
                                 return (
                                     <div className="team-info">
                                         <span>{index + 1}</span>
-                                        
+
                                         <span>{value.teamName}</span>
                                         <span>{value.noOfPlayers}</span>
                                     </div>
