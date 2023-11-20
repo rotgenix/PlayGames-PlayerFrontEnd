@@ -11,31 +11,42 @@
     background-size: cover;
 }
 
-
-
 .background-text-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(53, 52, 50, 0.815);
-
+    background-color: #161d22c8;
+    padding: 25px;
+    border: 1px solid white;
 }
 
 .background-text-container h1 {
     font-size: 80px;
 }
 
+.fight {
+    color: rgb(244, 53, 53);
+}
+
+.compete {
+    color: rgb(248, 248, 87);
+    margin-inline: 20px;
+}
+
+.conquer {
+    color: white;
+}
 
 /* Follow section  */
 
-.follow {
-    background-color: #8a1f13;
+.follow-section {
+    background-color: #ec321d;
     /* height: 50px; */
     padding-block: 18px;
 }
 
-.about-paai {
+.follow-section-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -43,12 +54,35 @@
     align-items: center;
 }
 
-.about-paai ul {
+.about-link {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.socials-container ul {
+    font-size: 32px;
+
     display: flex;
     /* justify-content: space-between; */
     list-style: none;
     gap: 20px;
+
+
 }
+
+.socials-container ul li {
+    animation-name: socialsAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.socials-container ul li a {
+    color: black;
+    border: 1ps solid black;
+}
+
 
 
 
@@ -111,9 +145,10 @@
     padding-block: 100px;
 }
 
-.featured {
-    margin: 0 auto;
+.featured-tournaments-container {
     max-width: 1200px;
+    margin: 0 auto;
+
     /* background-color: antiquewhite; */
 
 }
@@ -150,4 +185,34 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Animation Keyframes */
+@keyframes socialsAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    33% {
+        transform: translateY(-8px);
+
+    }
+
+    66% {
+        transform: translateY(8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }

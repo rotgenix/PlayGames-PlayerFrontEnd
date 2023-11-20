@@ -1,63 +1,111 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+
+
+import { server } from '../App';
+import { Context } from '../main';
+
+import '../Styles/PlayerRegister.css'
+
+
+import registerBackground from '../assets/register-background.jpg'
+import Loader from '../Components/Loader';
+
 
 const PlayerRegistration = () => {
 
-    const [username, setUsername] = useState('');
+    const [loader, setLoader] = useState(false);
+
+    const Navigate = useNavigate();
+    const {
+        isPlayerLoggedIn,
+        setIsPlayerLoggedIn,
+    } = useContext(Context);
+
+
+    if (isPlayerLoggedIn) {
+        alert("Player is logged in register");
+        Navigate('/');
+    }
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const callPlayerRegister = async (e) => {
-        e.preventDefault();
+        setLoader(true);
 
-        const registeredPlayer = await axios.post("http://localhost:5000/playerRegister", {
-            username, name, email, password
+        e.preventDefault();
+        const { data } = await axios.post(`${server}/playerRegister`, {
+            name, email, password
         }, {
             headers: {
                 "Content-Type": "application/json"
             },
             withCredentials: true,
-        })
-        console.log(registeredPlayer);
-    }
+        });
+        console.log("reg res data", data);
+        if (data.success) {
+            // alert(data.message);
 
+            setIsPlayerLoggedIn(true);
+            setLoader(false);
+
+            Navigate('/');
+        }
+        else {
+            alert(data.message);
+            setIsPlayerLoggedIn(false);
+            Navigate('/login');
+        }
+    }
 
     return (
         <>
             <div className="player-register">
-                <div className="player-register-container">
+                {
+                    loader ? <Loader /> : <div>
+                        <div className="background-image">
+                        </div>
 
-                    <form onSubmit={callPlayerRegister}>
+                        <div className="player-register-container">
+                            <h3>You might be the NEXT LEGEND</h3>
+                            <div className="form-container">
+                                <form onSubmit={callPlayerRegister}>
 
-                        Username: <input type="text" name='username' required
-                            onChange={(e) => {
-                                setUsername(e.target.value)
-                            }}
-                        />
+                                    <input type="text" name='name' required
+                                        placeholder='Name'
+                                        onChange={(e) => {
+                                            setName(e.target.value)
+                                        }}
+                                    />
 
-                        Name: <input type="text" name='name' required
-                            onChange={(e) => {
-                                setName(e.target.value)
-                            }}
-                        />
+                                    <input type="email" name='email' required
+                                        placeholder='Email'
+                                        onChange={(e) => {
+                                            setEmail(e.target.value)
+                                        }}
+                                    />
 
-                        Email: <input type="email" name='email' required
-                            onChange={(e) => {
-                                setEmail(e.target.value)
-                            }}
-                        />
+                                    <input type="password" name='password' required
+                                        placeholder='Password'
+                                        onChange={(e) => {
+                                            setPassword(e.target.value)
+                                        }}
+                                    />
 
-                        Password: <input type="password" name='password' required
-                            onChange={(e) => {
-                                setPassword(e.target.value)
-                            }}
-                        />
-
-                        <button type='submit'>Register</button>
-                    </form>
-
-                </div>
+                                    <button type='submit'>Register</button>
+                                </form>
+                            </div>
+                            <div className='login-here'>
+                                <p>Already registered?
+                                    <Link to={'/login'}>Login here</Link>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
 
             </div>
         </>

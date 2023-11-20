@@ -1,30 +1,36 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 const OrganiserRegister = () => {
 
+    const Navigate = useNavigate();
 
-
-
-
-    const [username, setUsername] = useState('');
     const [organisationName, setOrganisationName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const callOrganiserRegister = async (e) => {
         e.preventDefault();
-        console.log(username, organisationName, email, password)
+        console.log(organisationName, email, password)
 
-        const registeredPlayer = await axios.post("http://localhost:5000/organiserRegister", {
-            username, organisationName, email, password
+        const { data } = await axios.post("http://localhost:5000/organiserRegister", {
+            organisationName, email, password
         }, {
             headers: {
                 "Content-Type": "application/json"
             },
             withCredentials: true,
-        })
-        console.log(registeredPlayer);
+        });
+        if (data.message === 'UserName already Taken Please choose another!') {
+            alert(data.message);
+            // Navigate('/');
+        }
+        else if (data.success) {
+            alert(data.message);
+            // Navigate('/login');
+        }
+        // console.log(registeredPlayer);
     }
 
     return (
@@ -34,11 +40,6 @@ const OrganiserRegister = () => {
 
                     <form onSubmit={callOrganiserRegister}>
 
-                        Username: <input type="text" name='username' required
-                            onChange={(e) => {
-                                setUsername(e.target.value);
-                            }}
-                        />
 
                         Organisation Name: <input type="text" name='name' required
                             onChange={(e) => {

@@ -1,21 +1,80 @@
-.touranment-register {}
+.touranment-register {
+    background-color: #161d22;
+    height: calc(100vh - 64px);
+
+    padding-top: 100px;
+}
 
 
 .tournament-register-container {
     max-width: 1200px;
     margin: 0 auto;
 
-    height: calc(100vh - 72px);
-
-    display: flex;
-    justify-content: center;
-    background-color: blanchedalmond;
-
-}
-
-.tournament-register-container form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.tournament-register-container h3 {
+    font-size: 32px;
+    color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: 50px;
+}
+
+/* .tournament-register-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.tournament-register-container form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 25px;
+}
+
+
+.tournament-register-container form input {
+    width: 100%;
+    font-size: 18px;
+    background-color: #161d22;
+    border: none;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid red;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    /* margin: 1000px; */
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.tournament-register-container form button {
+    font-size: 18px;
+    padding-block: 4px;
+    background-color: #161d22;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    outline: none;
+    transition-delay: 0.3s;
+    transition: all 0.3s ease;
+}
+
+.tournament-register-container form button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+
 }

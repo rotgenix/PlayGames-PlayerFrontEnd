@@ -4,14 +4,6 @@ import '../Styles/GameCard.css'
 import '../Styles/TournamentCard.css'
 import { Link } from 'react-router-dom'
 
-// //TournamentGames
-// import bgmi from '../assets/TournamentGames/bgmiTournament.jpg'
-// import codm from '../assets/TournamentGames/codmTournament.jpg'
-// import csgo from '../assets/TournamentGames/csgoTournament.jpg'
-// import dota2 from '../assets/TournamentGames/dota2Tournament.jpg'
-// import leagueOfLegends from '../assets/TournamentGames/lolTournament.jpg'
-// import valorant from '../assets/TournamentGames/valorantTournament.jpg'
-
 const bgmi = 'https://wallpapers.com/images/high/bgmi-cyberpunk-street-cxapqv3ux77orya3.webp'
 const codm = 'https://wallpaperaccess.com/full/1470805.jpg'
 const csgo = 'https://e1.pxfuel.com/desktop-wallpaper/536/381/desktop-wallpaper-counter-csgo-pc.jpg'
@@ -21,10 +13,7 @@ const valorant = 'https://e0.pxfuel.com/wallpapers/182/605/desktop-wallpaper-cha
 
 
 const TournamentCard = ({ gameName, prizePool, tournamentDate, tournamentName, tournamentTime, organiserName, tournamentID, imgAddress }) => {
-    // console.log(gameName);
-    // const imgName = `${gameName}`;
-    // console.log(leagueOfLegends)
-    // console.log("img ", imgName);
+
     return (
         <>
             <div className="tournament-card">

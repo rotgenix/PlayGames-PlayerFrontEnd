@@ -1,7 +1,11 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { server } from '../App';
 
 const CreateTournament = () => {
+
+    const Navigate = useNavigate();
 
     const [tournamentName, setTournamentName] = useState('');
     const [prizePool, setPrizePool] = useState(0);
@@ -10,16 +14,12 @@ const CreateTournament = () => {
     const [gameName, setGameName] = useState('');
 
 
-    const setLink = () => {
-
-    }
-
     const postTournamentHandler = async (e) => {
         e.preventDefault();
 
         console.log('sending ', tournamentName, prizePool, tournamentDate, tournamentTime, gameName);
 
-        const { data } = await axios.post("http://localhost:5000/createTournament", {
+        const { data } = await axios.post(`${server}/createTournament`, {
             tournamentName,
             prizePool,
             tournamentDate,
@@ -34,8 +34,17 @@ const CreateTournament = () => {
             withCredentials: true,
         });
         console.log("create tournament: ", data);
+        console.log("create tournament: ", data.message);
+        console.log("create tournament: ", data.success);
 
-        // console.log("img l", imgLinks);
+
+        if (data.success) {
+            alert(data.message);
+            // Navigate('/tournaments');
+        }
+        else {
+            alert(data.message);
+        }
     }
 
 

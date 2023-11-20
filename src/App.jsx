@@ -14,6 +14,9 @@ import Dashboard from './Pages/Dashboard'
 import CreateTournament from './Pages/CreateTournament'
 import CheckTeams from './Pages/CheckTeams'
 import TournamentRegister from './Pages/TournamentRegister'
+import MyProfile from './Pages/MyProfile'
+
+export const server = 'https://playgames-fz1x.onrender.com';
 
 const App = () => {
   return (
@@ -22,20 +25,27 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-
-          <Route path='/register' element={<Register />} />
-          <Route path='/player' element={<PlayerRegistration />} />
-          <Route path='/organiser' element={<OrganiserRegister />} />
-          <Route path='/login' element={<Login />} />
-
           <Route path='/tournaments' element={<Tournaments />} />
+          <Route path='/join' element={<PlayerRegistration />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/myprofile/:playerID' element={<MyProfile />} />
+          <Route path='/tournamentregister/:tournamentID' element={<TournamentRegister />} />
+
+
+
+          {/* <Route path='/logout' element={<Login />} /> */}
+
+
+
+
+          {/* <Route path='/register' element={<Register />} /> */}
+
+          <Route path='/organiser' element={<OrganiserRegister />} />
 
           <Route path='/dashboard/:id' element={<Dashboard />} />
           <Route path='/createtournament' element={<CreateTournament />} />
           <Route path='/tournaments/teams/:tournamentID' element={<CheckTeams />} />
 
-
-          <Route path='/tournamentregister/:tournamentID' element={<TournamentRegister />} />
         </Routes>
       </Router>
     </>

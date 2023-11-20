@@ -1,0 +1,55 @@
+.myprofile {
+    background-color: #1a2024;
+    min-height: calc(100vh - 64px);
+}
+
+.myprofile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding-block: 25px;
+
+}
+
+.myprofile-container h3 {
+    font-size: 32px;
+    text-align: center;
+    color: white;
+    /* padding: 10px; */
+    margin-bottom: 25px;
+    border-bottom: 2px solid white;
+}
+
+.details,
+.participating-tournament {
+    /* width: 300px; */
+    border: 1px solid white;
+    border-radius: 3px;
+    justify-content: space-between;
+
+    color: white;
+    font-size: 18px;
+    margin-inline: 25px;
+    /* margin-bottom: 25px; */
+    padding: 10px;
+}
+
+.participating-tournament span {
+    text-align: start;
+    align-self: self-start;
+    align-content: start;
+}
+
+.details span {
+    /* background-color: white; */
+}
+
+.participating-tournament {
+    color: white;
+
+}
