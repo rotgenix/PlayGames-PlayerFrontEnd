@@ -52,10 +52,10 @@ const MyProfile = () => {
                         <h3>Your Registered Tournaments</h3>
                         {
                             tournaArray.map((value, index) => {
-                                console.log("value", value);
-                                console.log("value", value.tournamentName);
-                                console.log("value", value.tournamentDate);
-                                console.log("value", value.tournamentTime);
+                                // console.log("value", value);
+                                // console.log("value", value.tournamentName);
+                                // console.log("value", value.tournamentDate);
+                                // console.log("value", value.tournamentTime);
                                 return (<MyProfileComponent
                                     tournamentName={value.tournamentName}
                                     tournamentDate={value.tournamentDate}
