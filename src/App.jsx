@@ -30,22 +30,6 @@ const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/myprofile/:playerID' element={<MyProfile />} />
           <Route path='/tournamentregister/:tournamentID' element={<TournamentRegister />} />
-
-
-
-          {/* <Route path='/logout' element={<Login />} /> */}
-
-
-
-
-          {/* <Route path='/register' element={<Register />} /> */}
-
-          <Route path='/organiser' element={<OrganiserRegister />} />
-
-          <Route path='/dashboard/:id' element={<Dashboard />} />
-          <Route path='/createtournament' element={<CreateTournament />} />
-          <Route path='/tournaments/teams/:tournamentID' element={<CheckTeams />} />
-
         </Routes>
       </Router>
     </>

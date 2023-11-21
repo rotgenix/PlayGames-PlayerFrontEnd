@@ -17,7 +17,7 @@ const DashboardTournamentCard = ({ tournamentTime, tournamentName, tournamentDat
         }, {
             withCredentials: true,
         })
-        console.log(deletedTournament)
+        // console.log(deletedTournament)
     }
 
     return (

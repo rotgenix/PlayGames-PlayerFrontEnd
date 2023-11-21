@@ -37,7 +37,7 @@ const Navbar = () => {
 
 
     const logOutHandler = async () => {
-        setVerticalNav(!verticalNav)
+        setVerticalNav(!verticalNav);
         const { data } = await axios.get(`${server}/playerLogout`, {
             withCredentials: true,
         });
