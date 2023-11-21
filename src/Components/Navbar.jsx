@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 
 import { Link, useNavigate } from 'react-router-dom'
 
-import '../Styles/navbar.css'
+import '../Styles/Navbar.css'
 
 import { Context } from '../main'
 import axios from 'axios'
