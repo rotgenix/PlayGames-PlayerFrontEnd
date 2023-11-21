@@ -16,20 +16,10 @@ import TournamentCard from '../Components/TournamentCard'
 import { Link } from 'react-router-dom'
 // import { Context } from '../main'
 
-
-
-
-
-
-
-
-
-
 import { FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 // import { BsTwitterX } from "react-icons/bs";
-
 
 import { server } from '../App'
 import Loader from '../Components/Loader'
@@ -37,9 +27,7 @@ import Loader from '../Components/Loader'
 const Home = () => {
 
     const [loader, setLoader] = useState(false);
-
     const [tournamentsData, setTournamentsData] = useState([]);
-
     useEffect(() => {
 
         const fetchTournaments = async () => {
@@ -49,7 +37,6 @@ const Home = () => {
         fetchTournaments();
 
     }, []);
-
 
     return (
         <>

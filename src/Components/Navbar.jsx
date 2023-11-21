@@ -7,8 +7,24 @@ import '../Styles/navbar.css'
 import { Context } from '../main'
 import axios from 'axios'
 import { server } from '../App'
+import { GiHamburgerMenu } from "react-icons/gi";
+import { useState } from 'react'
+
+import { ImCross } from "react-icons/im";
 
 const Navbar = () => {
+
+    const navInitial = {
+        left: '0',
+        top: '-400px'
+    }
+    const navFinal = {
+        left: '0',
+        top: '60px'
+    }
+
+    const [verticalNav, setVerticalNav] = useState(false);
+
 
     const Navigate = useNavigate();
 
@@ -21,6 +37,7 @@ const Navbar = () => {
 
 
     const logOutHandler = async () => {
+        setVerticalNav(!verticalNav)
         const { data } = await axios.get(`${server}/playerLogout`, {
             withCredentials: true,
         });
@@ -34,6 +51,7 @@ const Navbar = () => {
         else {
             alert(data.message);
             setIsPlayerLoggedIn(true);
+
             // console.log(isPlayerLoggedIn)
         }
     }
@@ -74,36 +92,67 @@ const Navbar = () => {
 
 
                     <div className="right">
-                        <ul>
+                        <ul
+                            style={verticalNav ? navFinal : navInitial}
+                        >
                             <li>
-                                <Link to={'/'}> <button>Home</button> </Link>
+                                <Link to={'/'}> <button
+                                    onClick={() => {
+                                        setVerticalNav(!verticalNav)
+                                    }}
+                                >Home</button> </Link>
                             </li>
 
                             <li>
-                                <Link to={'/tournaments'}> <button>Tournaments</button> </Link>
+                                <Link to={'/tournaments'}>
+                                    <button
+                                        onClick={() => {
+                                            setVerticalNav(!verticalNav)
+                                        }}
+                                    >Tournaments</button> </Link>
                             </li>
 
                             <li>
                                 {
 
-                                    isPlayerLoggedIn ? <Link to={`/myprofile/${playerID}`}> <button>MyProfile</button> </Link>
+                                    isPlayerLoggedIn ? <Link to={`/myprofile/${playerID}`}> <button
+                                        onClick={() => {
+                                            setVerticalNav(!verticalNav)
+                                        }}
+                                    >MyProfile</button> </Link>
                                         :
-                                        <Link to={'/join'}> <button>Join</button> </Link>
+                                        <Link to={'/join'}>
+                                            <button onClick={() => {
+                                                setVerticalNav(!verticalNav)
+                                            }}
+                                            >Join</button> </Link>
                                 }
                             </li>
 
                             <li>
 
                                 {
-                                    isPlayerLoggedIn ? <button className='log-out-btn' onClick={logOutHandler}>Logout</button>
+                                    isPlayerLoggedIn ? <button className='log-out-btn' onClick={logOutHandler} >Logout</button>
                                         :
                                         <Link to={'/login'}>
-                                            <button>Login</button>
+                                            <button onClick={() => {
+                                                setVerticalNav(!verticalNav)
+                                            }}>Login</button>
                                         </Link>
                                 }
                             </li>
 
                         </ul>
+                        <button
+                            onClick={() => {
+                                setVerticalNav(!verticalNav);
+                            }}
+                            className='hamburger'
+                        >
+                            {
+                                verticalNav ? <ImCross /> : <GiHamburgerMenu />
+                            }
+                        </button>
                     </div>
                 </div>
             </nav>

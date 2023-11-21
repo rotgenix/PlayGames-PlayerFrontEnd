@@ -1,12 +1,12 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { server } from '../App';
+
 
 const CreateTournament = () => {
 
     const Navigate = useNavigate();
-
+    const server = '';
     const [tournamentName, setTournamentName] = useState('');
     const [prizePool, setPrizePool] = useState(0);
     const [tournamentDate, setTournamentDate] = useState(new Date());
@@ -19,7 +19,7 @@ const CreateTournament = () => {
 
         console.log('sending ', tournamentName, prizePool, tournamentDate, tournamentTime, gameName);
 
-        const { data } = await axios.post(`${server}/createTournament`, {
+        const { data } = await axios.post(`https://playgames-fz1x.onrender.com/tournament/createTournament`, {
             tournamentName,
             prizePool,
             tournamentDate,

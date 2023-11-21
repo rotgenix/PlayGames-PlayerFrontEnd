@@ -1,5 +1,9 @@
-.hero-section {
+.home-section {
     position: relative;
+}
+
+.home-section-container {
+    width: 100%;
 }
 
 .background-image-container {
@@ -17,11 +21,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #161d22c8;
+    
     padding: 25px;
     border: 1px solid white;
 }
 
 .background-text-container h1 {
+    display: flex;
+    /* flex-wrap: wrap; */
     font-size: 80px;
 }
 
@@ -52,6 +59,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-inline: 15px;
 }
 
 .about-link {

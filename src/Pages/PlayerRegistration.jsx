@@ -8,7 +8,6 @@ import { Context } from '../main';
 
 import '../Styles/PlayerRegister.css'
 
-
 import registerBackground from '../assets/register-background.jpg'
 import Loader from '../Components/Loader';
 
