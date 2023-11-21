@@ -32,8 +32,8 @@ const MyProfile = () => {
             let { data } = await axios.get(`${server}/myProfile/${playerID}`, {
             });
 
-            console.log("data ", data);
-            console.log("Tournaments ", data.participatedTournaments);
+            // console.log("data ", data);
+            // console.log("Tournaments ", data.participatedTournaments);
             let { playerData } = data;
 
             let { participatedTournaments } = playerData;
