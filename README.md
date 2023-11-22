@@ -10,10 +10,17 @@ Both Player side and admin side have different front ends but both have the same
 
 This repo contains the code of Player Side Front end.
 
-Here is Live Link: https://play-games-player-front-end.vercel.app/
+### Here is Live Link:
 
+https://play-games-player-front-end.vercel.app/
 
-## Screenshots
+### For testing Purpose:
+
+Email: player1@gmail.com
+
+Password: 12345
+
+# Screenshots
 
 ![App Screenshot](https://raw.githubusercontent.com/rotgenix/PlayGames-PlayerFrontEnd/main/Screenshots/Screenshot%20(774).png)
 
