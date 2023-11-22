@@ -1,4 +1,3 @@
-
 # PlayGames
 PlayGames is MERN Stack fully functional app. In this app you can register with your email as a Player and Tournament Organiser(Admin).
 
@@ -8,10 +7,8 @@ While organisers can post any tournament and organisers can see participating te
 
 Both Player side and admin side have different front ends but both have the same backend.
 
-This repo contains the code of Player Side Front end.
 
-### Here is Live Link:
-
+Here is Live Link:
 https://play-games-player-front-end.vercel.app/
 
 ### For testing Purpose:
@@ -19,6 +16,18 @@ https://play-games-player-front-end.vercel.app/
 Email: player1@gmail.com
 
 Password: 12345
+
+
+This repo contains the code of Player Side Front end.
+
+
+
+### For Admin
+GitHub : https://github.com/rotgenix/Play-Games-AdminFrontEnd
+
+Live Link: https://play-games-admin-front-end.vercel.app/
+
+
 
 # Screenshots
 
@@ -37,8 +46,8 @@ Password: 12345
 
 
 
-![App Screenshot](https://raw.githubusercontent.com/rotgenix/PlayGames-PlayerFrontEnd/main/Screenshots/Screenshot%20(778).png)
 
+![App Screenshot](https://raw.githubusercontent.com/rotgenix/PlayGames-PlayerFrontEnd/main/Screenshots/Screenshot%20(778).png)
 
 
 ## Run Locally
