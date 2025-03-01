@@ -55,9 +55,10 @@ const PlayerRegistration = () => {
         }
         else {
             alert(data.message);
-            setIsPlayerLoggedIn(false);
-            Navigate('/login');
+            // setIsPlayerLoggedIn(false);
+            // Navigate('/login');
         }
+        setLoader(false);
     }
 
     return (
